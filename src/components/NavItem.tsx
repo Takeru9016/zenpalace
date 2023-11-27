@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib";
 import { Button } from "./ui/button";
 import { PRODUCT_CATEGORIES } from "@/config";
 import Link from "next/link";

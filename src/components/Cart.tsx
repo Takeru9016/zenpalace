@@ -13,7 +13,7 @@ import {
   SheetTrigger,
 } from "./ui/sheet";
 import { Separator } from "./ui/separator";
-import { formatPrice } from "@/lib/utils";
+import { formatPrice } from "@/lib";
 import { buttonVariants } from "./ui/button";
 
 export default function Cart() {
