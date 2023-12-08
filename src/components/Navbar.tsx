@@ -4,14 +4,15 @@ import Link from "next/link";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import { Icons } from "./Icons";
 import NavItems from "./NavItems";
-import { buttonVariants } from "./ui/button";
+import UserAccountNav from "./UserAccountNav";
 import Cart from "./Cart";
+import { buttonVariants } from "./ui/button";
 import { getServerSideUser } from "@/lib";
 
 export default async function Navbar() {
   const nextCookies = cookies();
   const { user } = await getServerSideUser(nextCookies);
-  
+
   return (
     <div className="bg-white sticky z-50 top-0 inset-x-0 h-16">
       <header className="relative bg-white">
@@ -46,7 +47,7 @@ export default async function Navbar() {
                   )}
 
                   {user ? (
-                    <p></p>
+                    <UserAccountNav user={user} />
                   ) : (
                     <Link
                       href="/sign-up"

@@ -41,10 +41,9 @@ export default function Page() {
     onSuccess: () => {
       toast.success("Signed in successfully");
 
-      router.refresh();
-
       if (origin) {
         router.push(`/${origin}`);
+        return;
       }
 
       if (isSeller) {
@@ -53,6 +52,7 @@ export default function Page() {
       }
 
       router.push("/");
+      router.refresh();
     },
 
     onError: (err) => {
@@ -137,7 +137,7 @@ export default function Page() {
               </div>
               <div className="relative flex justify-center text-xs uppercase">
                 <span className="px-2 bg-background text-muted-foreground">
-                  Or continue with
+                  OR
                 </span>
               </div>
             </div>
