@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Toaster } from "sonner";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import "../globals.css";
 import { cn } from "@/lib";
 import Navbar from "@/components/Navbar";
 import Providers from "@/components/Providers";
+import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,7 +29,10 @@ export default function RootLayout({
         <main className="relative flex flex-col min-h-screen">
           <Providers>
             <Navbar />
-            <div className="flex-grow flex-1">{children}</div>
+            <div className="flex-grow flex-1">
+              {children}
+              <SpeedInsights />
+            </div>
           </Providers>
         </main>
 
