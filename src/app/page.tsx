@@ -3,6 +3,7 @@ import { ArrowDownToLine, CheckCircle, Leaf } from "lucide-react";
 
 import { Button, buttonVariants } from "@/components/ui/button";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import ProductReel from "@/components/ProductReel";
 
 const perks = [
   {
@@ -46,7 +47,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* TODO: List Products */}
+        <ProductReel title="Brand New" />
       </MaxWidthWrapper>
 
       <section className="border-t border-gray-200 bg-gray-50">
